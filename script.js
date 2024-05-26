@@ -53,8 +53,6 @@ window.onload = () => {
 const calculTotalChange = (cashDrawer) =>
 	cashDrawer.reduce((acc, el) => el[1] + acc, 0);
 
-// console.log(calculTotalChange(cid).toFixed(2));
-
 const calculExactChange = (price, cash, cashDrawer) => {
 	const difference = Number((cash - price).toFixed(2));
 
@@ -92,8 +90,6 @@ const calculExactChange = (price, cash, cashDrawer) => {
 				Number(findTen(difference)[0][1]) +
 				Number(findTwenty(difference)[0][1]) +
 				Number(findHundred(difference)[0][1]);
-			console.log("drw", drawer);
-			console.log("dff", difference);
 			if (drawer === difference) {
 				updateChangeInDrawer(difference);
 				changeDue.innerHTML = `
